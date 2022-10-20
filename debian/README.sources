@@ -1,0 +1,7 @@
+The upstream source code package contains software (Utilities/metis/*) that does not ship
+with a  free software license. Hence it has been excluded from this package.
+.
+Other software, such as HDF5, that is shipped separately within Debian is shipped with this
+package but not built; the main Debian version is linked instead, as per Debian policy.
+
+- Alastair McKinstry <mckinstry@debian.org>, 2011-07-09

@@ -1,0 +1,19 @@
+Author: Katsuhiko Nishimra <ktns.87@gmail.com> 
+Description: Fix install dir that leads to python pyc files in wrong dir.
+Bug-Origin: https://bugs.debian.org/819879
+Forwarded: no
+Last-Updated: 2016-04-03
+
+Index: xdmf-3.0+git20170413/libsrc/CMakeLists.txt
+===================================================================
+--- xdmf-3.0+git20170413.orig/libsrc/CMakeLists.txt
++++ xdmf-3.0+git20170413/libsrc/CMakeLists.txt
+@@ -506,7 +506,7 @@ IF(XDMF_WRAP_PYTHON)
+ 
+   # Compile Byte Code
+   INSTALL(CODE "EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} ${Xdmf_SOURCE_DIR}/CMake/CompileXdmfByteCode.py 
+-    ${CMAKE_INSTALL_PREFIX}/${XDMF_WRAP_PYTHON_INSTALL_PY_DIR})")
++    ${CMAKE_INSTALL_PREFIX}/${XDMF_WRAP_PYTHON_INSTALL_DIR})")
+   
+ ENDIF(XDMF_WRAP_PYTHON)
+ 

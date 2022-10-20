@@ -1,0 +1,18 @@
+Description: Drop flags no longer accepted by swig 4.0
+Author: Alastair McKinstry <mckinstry@debian.org>
+Last-Updated: 2020-02-23
+Forwarded: no
+
+Index: xdmf-3.0+git20190531/CMakeLists.txt
+===================================================================
+--- xdmf-3.0+git20190531.orig/CMakeLists.txt
++++ xdmf-3.0+git20190531/CMakeLists.txt
+@@ -118,7 +118,7 @@ if(XDMF_WRAP_PYTHON)
+     set(CMAKE_SWIG_OUTDIR ${CMAKE_BINARY_DIR})
+     # optimize swig generation --- these are all flags corresponding to -O
+     # except -fvirtual which breaks visitor operation
+-    set(CMAKE_SWIG_FLAGS ${XDMF_SWIG_FLAGS} -modern -fastdispatch -nosafecstrings -noproxydel -fastproxy -fastinit -fastunpack -fastquery -modernargs -nobuildnone)
++    set(CMAKE_SWIG_FLAGS ${XDMF_SWIG_FLAGS}  -fastdispatch )
+     #Enables DSM
+     if (XDMF_BUILD_DSM)
+       set(CMAKE_SWIG_FLAGS ${CMAKE_SWIG_FLAGS} -DXDMF_BUILD_DSM)

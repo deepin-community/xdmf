@@ -1,0 +1,13 @@
+Index: xdmf-3.0+git20190531/core/XdmfCore.i
+===================================================================
+--- xdmf-3.0+git20190531.orig/core/XdmfCore.i
++++ xdmf-3.0+git20190531/core/XdmfCore.i
+@@ -598,7 +598,7 @@ swig -v -c++ -python -o XdmfCorePython.c
+         void *vp = $self->getValuesInternal();
+         Py_ssize_t sz =
+             $self->getSize() * $self->getArrayType()->getElementSize();
+-        PyObject * c = PyBuffer_FromMemory(vp, sz);
++        PyObject * c = PyMemoryView_FromMemory((char*)vp, sz, PyBUF_READ);
+         return(c);
+     }
+ 

@@ -1,0 +1,18 @@
+Author: Alastair McKinstry <mckinstry@debian.org>
+Description: Add name of library as seen on Debian
+Last-Updated: 2016-08-21
+Forwarded: no
+
+Index: xdmf-3.0+git20190531/CMake/FindExodus.cmake
+===================================================================
+--- xdmf-3.0+git20190531.orig/CMake/FindExodus.cmake
++++ xdmf-3.0+git20190531/CMake/FindExodus.cmake
+@@ -9,7 +9,7 @@ FIND_PACKAGE(NetCDF REQUIRED)
+ 
+ FIND_PATH(EXODUS_INCLUDE_DIR NAMES exodusII.h)
+ 
+-FIND_LIBRARY(EXODUS_LIBRARIES NAMES exodusii exodusIIv2c)
++FIND_LIBRARY(EXODUS_LIBRARIES NAMES exodusii exodusIIv2c exoIIv2)
+ 
+ INCLUDE(FindPackageHandleStandardArgs)
+ 

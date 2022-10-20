@@ -1,0 +1,6 @@
+/usr/lib/@MULTIARCH@/libXdmf.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@
+/usr/lib/@MULTIARCH@/libXdmfUtils.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@
+/usr/lib/libXdmfCore.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@
+./debian/build-serial-@PY3@/lib/libXdmf.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial
+./debian/build-serial-@PY3@/lib/libXdmfCore.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial
+./debian/build-serial-@PY3@/lib/libXdmfUtils.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial

@@ -1,0 +1,27 @@
+--- XDMFConfig.cmake	2014-04-14 14:25:55.000000000 +0100
++++ XDMFConfig.cmake.new	2014-04-14 14:58:12.823289754 +0100
+@@ -12,13 +12,13 @@
+ SET(XDMF_INCLUDE_DIRS "${XDMF_INSTALL_DIR}/include/;/usr/include")
+ 
+ # The XDMF library directories.
+-SET(XDMF_LIBRARY_DIRS "${XDMF_INSTALL_DIR}/lib")
++SET(XDMF_LIBRARY_DIRS "${XDMF_INSTALL_DIR}/lib/@ARCH@")
+ 
+ # The location of the UseXDMF.cmake file.
+ SET(XDMF_USE_FILE "${XDMF_INSTALL_DIR}/lib/XdmfCMake/UseXDMF.cmake")
+ 
+ # The build settings file.
+-SET(XDMF_BUILD_SETTINGS_FILE "${XDMF_INSTALL_DIR}/lib/XdmfCMake/XDMFBuildSettings.cmake")
++SET(XDMF_BUILD_SETTINGS_FILE "${XDMF_INSTALL_DIR}/lib/@ARCH@/cmake/XdmfCMake/XDMFBuildSettings.cmake")
+ 
+ # The directory containing class list files for each kit.
+ SET(XDMF_KITS_DIR "${XDMF_INSTALL_DIR}/vtk")
+@@ -44,7 +44,7 @@
+ 
+ # The XDMF library dependencies.
+ IF(NOT XDMF_NO_LIBRARY_DEPENDS)
+-  INCLUDE("${XDMF_INSTALL_DIR}/lib/XdmfCMake/XDMFLibraryDepends.cmake")
++  INCLUDE("${XDMF_INSTALL_DIR}/lib/@ARCH@/cmake/XdmfCMake/XDMFLibraryDepends.cmake")
+ ENDIF(NOT XDMF_NO_LIBRARY_DEPENDS)
+ 
+ # Information about this particular XDMF Installation

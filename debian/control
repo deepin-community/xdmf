@@ -1,0 +1,61 @@
+Source: xdmf
+Section: science
+Priority: optional
+Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Build-Depends: debhelper-compat (= 13),
+  dh-sequence-python3, 
+  python3-all-dev, 
+  cmake(>= 2.4.0), 
+  libhdf5-serial-dev, libhdf5-mpi-dev,
+  libxml2-dev,  libboost-dev,
+  libtiff-dev,
+  gfortran | fortran-compiler, 
+  swig, 
+  bzip2, libbz2-dev,
+  libgzstream-dev,
+  libmetis-dev
+Build-Conflicts: libxdmf-dev
+Standards-Version: 4.6.0
+Homepage: http://www.xdmf.org/
+Vcs-Browser: https://salsa.debian.org/science-team/xdmf
+Vcs-Git: https://salsa.debian.org/science-team/xdmf.git -b debian/latest
+
+Package:  libxdmf3
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: eXtensible Data Model and Format library
+ The need for a standardized method to exchange scientific data between 
+ High Performance Computing codes and tools lead to the development of the 
+ eXtensible Data Model and Format (XDMF) . Uses for XDMF range from a 
+ standard format used by HPC codes to take advantage of widely used 
+ visualization programs like ParaView and VisIt, 
+ to a mechanism for performing coupled calculations using multiple, 
+ previously stand alone codes.
+ .
+ XDMF uses XML to store Light data and to describe the data Model. 
+ HDF5 is used to store Heavy data. The data Format is stored redundantly
+ in both XML and HDF5. This allows tools to parse XML to determine the 
+ resources that will be required to access the Heavy data. 
+ .
+ This package provides a version built on the serial version of HDF5.
+
+Package: libxdmf-dev
+Section: libdevel
+Architecture: any
+Conflicts: libloki-dev
+Depends: libxdmf3  (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, libgzstream-dev
+Breaks: libxdmf3 (<< 3.0+git20190531)
+Description: eXtensible Data Model and Format development tools
+ This package contains the headers and development tools needed to build
+ against the Xdmf libraries.
+
+Package: python3-xdmf
+Section: python
+Architecture: any
+Depends: libxdmf3  (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, ${python3:Depends}
+Description: Python3 wrappers for the eXtensible Data Model and Format library
+ This package provides python3 wrappers for the libXDMF library.
+

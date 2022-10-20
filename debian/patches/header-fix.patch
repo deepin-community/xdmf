@@ -1,0 +1,17 @@
+Author: Alastair McKinstry <mckinstry@debian.org>
+Description: Build fix needed for Debian
+Last-Updated: 2015-10-20
+Forwarded: no
+
+Index: xdmf-3.0+git20170413/libsrc/XdmfObject.h
+===================================================================
+--- xdmf-3.0+git20170413.orig/libsrc/XdmfObject.h
++++ xdmf-3.0+git20170413/libsrc/XdmfObject.h
+@@ -69,6 +69,7 @@
+ #ifndef __XdmfObject_h
+ #define __XdmfObject_h
+ 
++#include <string.h>
+ 
+ # ifndef SWIG
+ #if !defined( WIN32 ) || defined(__CYGWIN__)

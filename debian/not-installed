@@ -1,0 +1,12 @@
+usr/lib/libXdmfCore.so
+usr/lib/libXdmfCore.so.3
+usr/lib/python3*/xdmf/Xdmf.py
+usr/lib/python3*/xdmf/XdmfCore.py
+usr/lib/python3*/xdmf/XdmfUtils.py
+usr/lib/python3*/xdmf/__Xdmf.so
+usr/lib/python3*/xdmf/__XdmfCore.so
+usr/lib/python3*/xdmf/__XdmfUtils.so
+usr/lib/*/libXdmf.so
+usr/lib/*/libXdmf.so.3
+usr/lib/*/libXdmfUtils.so
+usr/lib/*/libXdmfUtils.so.3

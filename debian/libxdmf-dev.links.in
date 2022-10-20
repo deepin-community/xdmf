@@ -1,0 +1,6 @@
+/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmf.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmf.so
+/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmfCore.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmfCore.so
+/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmfUtils.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/@MPI@/libXdmfUtils.so
+/usr/lib/@MULTIARCH@/xdmf/serial/libXdmf.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial/libXdmf.so
+/usr/lib/@MULTIARCH@/xdmf/serial/libXdmfCore.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial/libXdmfCore.so
+/usr/lib/@MULTIARCH@/xdmf/serial/libXdmfUtils.so.3.0.0	/usr/lib/@MULTIARCH@/xdmf/serial/libXdmfUtils.so

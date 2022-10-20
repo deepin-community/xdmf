@@ -1,0 +1,5 @@
+/usr/include/X*
+/usr/include/P*
+/usr/include/loki
+/usr/lib/*/cmake
+utils/Xdmf.f	/usr/include
