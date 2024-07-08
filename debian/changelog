@@ -1,8 +1,12 @@
-xdmf (3.0+git20190531-10) UNRELEASED; urgency=medium
+xdmf (3.0+git20190531-10deepin1) unstable; urgency=medium
 
+  [ Alastair McKinstry ]
   * update
 
- -- Alastair McKinstry <mckinstry@debian.org>  Wed, 27 Jul 2022 16:02:24 +0800
+  [ Tianyu Chen ]
+  * No source change upload against python 3.12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:58:27 +0200
 
 xdmf (3.0+git20190531-10) unstable; urgency=medium
 
